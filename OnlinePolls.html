@@ -1,0 +1,33 @@
+<head>
+    <title>OnlinePolls</title>
+</head>
+
+<body>
+{{> loginButtons}}
+{{> poll}}
+{{> results}}
+</body>
+
+<template name="results">
+    <h2>10 last results ({{count}})</h2>
+    {{#each result}}
+    <p><a href="">x</a> {{date}} - {{gender}} - {{userId}}</p>
+    {{/each}}
+</template>
+
+<template name="poll">
+    <h1>Hello! There is {{count}} polls waiting for you.</h1>
+    {{#with poll}}
+    <h1>{{title}}</h1>
+
+    <form class="poll_form">
+        {{#each options}}
+        <label>
+            <input type="radio" name="{{poll.name}}" value="{{name}}">
+            {{text}}{{#if value}} - {{value}} votes {{/if}}
+        </label><br>
+        {{/each}}
+        <input type="submit" value="Vote">
+    </form>
+    {{/with}}
+</template>

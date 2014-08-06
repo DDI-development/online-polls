@@ -1,0 +1,15 @@
+{
+  "meteor": {},
+  "dependencies": {
+    "basePackages": {
+      "accounts-vk": {}
+    },
+    "packages": {
+      "accounts-vk": {
+        "git": "https://github.com/alexpods/meteor-accounts-vk.git",
+        "tag": "v0.1.3",
+        "commit": "a81ac5b78abd133d6cf16102df64cb12adb0960e"
+      }
+    }
+  }
+}
