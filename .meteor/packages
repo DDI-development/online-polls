@@ -12,3 +12,4 @@ accounts-ui
 accounts-password
 accounts-vk
 email
+iron-router

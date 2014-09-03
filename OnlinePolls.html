@@ -17,6 +17,8 @@
 
 <template name="poll">
     <h1>Hello! There is {{count}} polls waiting for you.</h1>
+    <a href="{{pathFor 'home'}}" class="homeLink">Go home!</a>
+    <a href="{{pathFor 'about'}}">About!</a>
     {{#with poll}}
     <h1>{{title}}</h1>
 
@@ -30,4 +32,8 @@
         <input type="submit" value="Vote">
     </form>
     {{/with}}
+</template>
+
+<template name="about">
+    hello about
 </template>

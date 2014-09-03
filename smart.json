@@ -1,5 +1,6 @@
 {
   "packages": {
-    "accounts-vk": {}
+    "accounts-vk": {},
+    "iron-router": {}
   }
 }

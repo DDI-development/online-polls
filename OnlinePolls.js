@@ -1,6 +1,11 @@
 Polls = new Meteor.Collection('polls');
 Results = new Meteor.Collection('results');
 
+Router.map(function() {
+    this.route('OnlinePolls', {path: '/'});
+    this.route('about');
+});
+
 if (Meteor.isClient) {
 
     Template.poll.helpers({
@@ -63,8 +68,16 @@ if (Meteor.isClient) {
                 incModifier.$inc['options.' + index + '.value'] = 1;
                 Polls.update({_id: this._id}, incModifier);
             }
+        },
+        'click .homeLink': function() {
+            Router.go('OnlinePolls');
+            if (window.console) window.console.log('home is here');
+        },
+        'click .aboutLink': function() {
+            Router.go('about');
+            if (window.console) window.console.log('about is here');
         }
-    });
+});
 }
 
 if (Meteor.isServer) {
